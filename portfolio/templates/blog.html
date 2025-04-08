@@ -9,8 +9,12 @@
 <body>
     <div class ='container text-center'>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <h2>It is my blog</h2>
-        {{ projects }}   
+        <h1>It is my blog</h1>
+        {% for project in projects %}
+            <h2>{{project.title}}</h2>
+            <p>{{project.descriptions}}</p>
+            <img src="/media/portfolio/images/photo_2025-03-05_21-37-00.jpg">   
+        {% endfor %}
     </div>
 </body>
 </html>
